@@ -1,0 +1,74 @@
+.popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    width: 600px;
+    background-color: #252525;
+    padding: 40px 50px 50px;
+    border-radius: 5px;
+  }
+  &__title {
+    @include title(25px);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__form {
+    margin-top: 30px;
+    input {
+      font-family: 'Montserrat';
+      padding: 7px;
+      width: 100%;
+      display: block;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      outline: none;
+    }
+    textarea {
+      font-family: 'Montserrat';
+      padding: 7px;
+      margin-top: 30px;
+      width: 100%;
+      display: block;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      outline: none;
+      resize: none;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  &__btn {
+    cursor: pointer;
+    width: 45%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: $green;
+    transition: 0.15s;
+    @include title(20px);
+    &:last-child {
+      background-color: $red;
+    }
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+}

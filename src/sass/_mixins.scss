@@ -1,0 +1,10 @@
+@mixin title($fSize: 35px, $fWaight: 600) {
+  font-size: $fSize;
+  font-weight: $fWaight;
+  color: white;
+}
+@mixin text($fSize: 16px, $fWaight: 400) {
+  font-size: $fSize;
+  font-weight: $fWaight;
+  color: white;
+}

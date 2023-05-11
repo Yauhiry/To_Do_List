@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sass/index.scss">
+  <title>To Do List</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="wrap header__wrap">
+        <div class="header__logo">
+          <p>TODO</p>
+        </div>
+        <h1 class="header__title">What can i do today?</h1>
+        <div class="header__date"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="wrap main__wrap">
+        <div class="main__column column" data-column="toDo">
+          <div class="column__head">
+            <div class="column__info column__info_red">
+              <h3 class="column__title">To Do</h3>
+            </div>
+            <div class="column__control">
+              <div class="column__card-counter" id="to-do-counter">Total: </div>
+              <i class="fa-solid fa-plus column__btn column__btn_create"></i>
+              <i class="fa-solid fa-trash-can column__btn column__btn_del"></i>
+            </div>
+          </div>
+          <div class="column__content" id="to-do"></div>
+        </div>
+        <div class="main__column column" data-column="progress">
+          <div class="column__head">
+            <div class="column__info column__info_yellow">
+              <h3 class="column__title">In progress</h3>
+            </div>
+            <div class="column__control">
+              <div class="column__card-counter" id="progress-counter">Total: </div>
+              <i class="fa-solid fa-trash-can column__btn column__btn_del"></i>
+            </div>
+          </div>
+          <div class="column__content" id="progress"></div>
+        </div>
+        <div class="main__column column" data-column="done">
+          <div class="column__head">
+            <div class="column__info column__info_green">
+              <h3 class="column__title">Complete</h3>
+            </div>
+            <div class="column__control">
+              <div class="column__card-counter" id="done-counter">Total: </div>
+              <i class="fa-solid fa-trash-can column__btn column__btn_del"></i>
+            </div>
+          </div>
+          <div class="column__content" id="done"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="wrap footer__wrap">
+        <div class="footer__text">
+          <p>Yauheni Hirynski 2022</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup">
+    <div class="popup__container">
+      <div class="popup__content">
+        <h2 class="popup__title">Create a new task</h2>
+        <form class="popup__form">
+          <input type="text" class="input" placeholder="Enter title">
+          <textarea name="text" class="area" rows="10" placeholder="Enter text"></textarea>
+          <div class="popup__buttons">
+            <button class="popup__btn" id="create-task">Create</button>
+            <button class="popup__btn" id="close-popup">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
